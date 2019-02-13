@@ -41,20 +41,13 @@ img {
   align-self: center; }
 
 @media screen and (min-width: 1900px) {
-  .container {
-    width: 1800px; }
-    .container img {
-      width: 400px; }
+  .container img {
+    width: 400px; }
 
-  .container::after {
-    content: "";
-    width: 400px; } }
+  .container {
+    width: 1800px; } }
 @media screen and (max-width: 1900px) and (min-width: 1500px) {
   .container img {
-    width: 21vw; }
-
-  .container::after {
-    content: "";
     width: 21vw; } }
 @media screen and (max-width: 1500px) and (min-width: 1000px) {
   .container img {
@@ -63,9 +56,10 @@ img {
   .container img {
     width: 45vw; } }
 @media screen and (max-width: 600px) {
+  .container img {
+    width: 80vw; }
+
   .container {
-    justify-content: center; }
-    .container img {
-      width: 80vw; } }
+    justify-content: center; } }
 
 /*# sourceMappingURL=styles.css.map */

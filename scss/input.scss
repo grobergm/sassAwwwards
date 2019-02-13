@@ -66,62 +66,46 @@ img{
 //   transform: scale(3)
 // }
 
-@media screen and (min-width:$fullScreen) {
 
+@mixin mediaMix($imageSize){
   .container {
-    width:1800px;
-
     img{
-      width: $maxImg;
+      width: $imageSize;
     }
   }
 
-  .container::after{
-    content:"";
-    width: $maxImg;
+  // .container::after{
+  //   content:"";
+  //   width: $imageSize;
+  // }
+}
+
+@media screen and (min-width:$fullScreen) {
+  @include mediaMix($maxImg);
+  .container {
+    width:1800px;
   }
 }
 
 @media screen and (max-width:$fullScreen) and (min-width:$lapScreen) {
 
-  .container {
-    img{
-      width: $largeImg;
-    }
-  }
-
-  .container::after{
-    content:"";
-    width: $largeImg;
-  }
+  @include mediaMix($largeImg);
 
 }
 
 @media screen and (max-width:$lapScreen) and (min-width:$tabScreen) {
+    @include mediaMix($mediumImg);
 
-  .container {
-    img{
-      width: $mediumImg;
-    }
-  }
 }
 
 @media screen and (max-width:$tabScreen) and (min-width:$phoneScreen) {
+  @include mediaMix($smallImg);
 
-  .container {
-    img{
-      width: $smallImg;
-    }
-  }
 }
 
 @media screen and (max-width:$phoneScreen) {
-
+  @include mediaMix($smallestImg);
   .container {
     justify-content:center;
-
-    img{
-      width: $smallestImg;
-    }
   }
 }
