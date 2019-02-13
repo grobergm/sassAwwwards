@@ -38,12 +38,7 @@ nav {
   overflow: hidden; }
 
 img {
-  align-self: center;
-  padding-bottom: 40px;
-  transition: all 2s ease-in-out; }
-
-img:hover {
-  transform: scale(3); }
+  align-self: center; }
 
 @media screen and (min-width: 1900px) {
   .container {

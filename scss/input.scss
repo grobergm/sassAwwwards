@@ -58,13 +58,13 @@ nav{
 
 img{
     align-self:center;
-    padding-bottom:40px;
-    transition: all 2s ease-in-out;
+    // padding-bottom:40px;
+    // transition: all 2s ease-in-out;
   }
 
-img:hover{
-  transform: scale(3)
-}
+// img:hover{
+//   transform: scale(3)
+// }
 
 @media screen and (min-width:$fullScreen) {
 
