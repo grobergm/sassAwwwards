@@ -1,0 +1,92 @@
+* {
+  border: 1px solid pink;
+}
+
+
+$maxImg: 400px;
+$largeImg: 21vw;
+$mediumImg: 30vw;
+$smallImg: 45vw;
+$smallestImg: 80vw;
+
+$fullScreen: 1900px;
+$lapScreen: 1500px;
+$tabScreen: 1000px;
+$phoneScreen: 600px;
+
+
+
+
+
+.container {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  width: 95vw;
+  margin: 40px auto;
+  img{
+    align-self:center;
+    padding-bottom:40px;
+  }
+
+}
+
+@media screen and (min-width:$fullScreen) {
+
+  .container {
+    width:1800px;
+
+    img{
+      width: $maxImg;
+    }
+  }
+
+  .container::after{
+    content:"";
+    width: $maxImg;
+  }
+}
+
+@media screen and (max-width:$fullScreen) and (min-width:$lapScreen) {
+
+  .container {
+    img{
+      width: $largeImg;
+    }
+  }
+
+  .container::after{
+    content:"";
+    width: $largeImg;
+  }
+
+}
+
+@media screen and (max-width:$lapScreen) and (min-width:$tabScreen) {
+
+  .container {
+    img{
+      width: $mediumImg;
+    }
+  }
+}
+
+@media screen and (max-width:$tabScreen) and (min-width:$phoneScreen) {
+
+  .container {
+    img{
+      width: $smallImg;
+    }
+  }
+}
+
+@media screen and (max-width:$phoneScreen) {
+
+  .container {
+    justify-content:center;
+
+    img{
+      width: $smallestImg;
+    }
+  }
+}
