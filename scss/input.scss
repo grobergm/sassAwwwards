@@ -1,7 +1,6 @@
 * {
   margin:0;
   padding:0;
-  border: 1px solid pink;
 }
 
 $maxImg: 400px;
@@ -54,17 +53,17 @@ nav{
 .img-container{
   display:block;
   overflow:hidden;
+  margin-bottom:40px;
 }
 
 img{
     align-self:center;
-    // padding-bottom:40px;
-    // transition: all 2s ease-in-out;
+    transition: transform 2s ease-in-out;
   }
 
-// img:hover{
-//   transform: scale(3)
-// }
+img:hover{
+  transform: scale(3)
+}
 
 
 @mixin mediaMix($imageSize){
@@ -73,7 +72,6 @@ img{
       width: $imageSize;
     }
   }
-
   // .container::after{
   //   content:"";
   //   width: $imageSize;

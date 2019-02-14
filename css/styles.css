@@ -1,7 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
-  border: 1px solid pink; }
+  padding: 0; }
 
 a {
   text-decoration: none;
@@ -35,10 +34,15 @@ nav {
 
 .img-container {
   display: block;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 40px; }
 
 img {
-  align-self: center; }
+  align-self: center;
+  transition: transform 2s ease-in-out; }
+
+img:hover {
+  transform: scale(3); }
 
 @media screen and (min-width: 1900px) {
   .container img {
